@@ -1,0 +1,151 @@
+ <!--DOCTYPE html-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--==Title============================-->
+    <title>Product Detail</title>
+    <!--==CSS==============================-->
+    <link rel="stylesheet" href="pdetail.css"/>
+    <!--==Poppins-font=====================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--==Using-Font-Awesome-for-Icons=====-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+
+</head>
+<body>
+
+    <!--==Product-Page=================================-->
+    <section id="product-page">
+    <div class="product-details">
+        <!--**Img*************************-->
+        <div class="product-img">
+
+        <!-- Swiper Slider -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            
+        
+            <!--**4******-->
+            <div class="swiper-slide">
+              <img src="../images/dinner/BBQ.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/dinner/Alfaredo pasta.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/dinner/Tempura fish.jpg" />
+      </div>
+
+
+
+            </div>
+
+            <!--btns-->
+            <div class="slider-btns">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+
+            <!--social-->
+            <div class="img-social-bar">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <!--**Text************************-->
+        <div class="product-text">
+            <!--category-->
+            <span class="product-category">24K COSMETIC</span>
+            <h3>24K purfumes</h3>
+            <span class="product-price">PKR 3000</span>
+            <p>A perfume is a liquid mixture used to emit a pleasant odour. It is formed from fragrant essential oils derived from plants and spices or synthetic aromatic compounds. Cosmetic fragrances applied to a person's body to emit a pleasant smell include perfume, cologne, and aftershave .
+                <br/>
+
+            </p>
+            <!--size-->
+            <div class="product-size-container">
+                <strong>Select Size:-</strong>
+                <div class="product-size">
+                    <!--xl-->
+                    <input type="checkbox" class="s-checkbox" id="s-xl">
+                    <label for="s-xl" class="s-label">XL</label>
+                    <!--Small-->
+                    <input type="checkbox" class="s-checkbox" id="s-s">
+                    <label for="s-s" class="s-label">S</label>
+                    <!--Medium-->
+                    <input type="checkbox" class="s-checkbox" id="s-m">
+                    <label for="s-m" class="s-label">M</label>
+                    <!--Large-->
+                    <input type="checkbox" class="s-checkbox" id="s-l">
+                    <label for="s-l" class="s-label">L</label>
+                </div>
+            </div>
+
+            <!--btn-->
+            <div class="product-button">
+                <a href="#" class="add-bag-btn">Add To Bag</a>
+                <a href="#" class="add-wishlist-btn">Add To Wishlist</a>
+            </div>
+            <!--help-btn-->
+            <a href="#" class="help-btn">Need Any Help?</a>
+        </div>
+    </div>
+    </section>
+
+    <!--==Jquery===========================-->
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          450: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+          },
+          820: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween:0,
+          },
+        },
+      });
+
+
+      $('.s-checkbox').on('change', function() {
+		    $('.s-checkbox').not(this).prop('checked', false);  
+		});
+    </script>
+</body>
+</html>
+ 
